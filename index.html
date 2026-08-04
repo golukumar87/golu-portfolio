@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golu Kumar | Portfolio | Full Stack MERN Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Golu Kumar, a professional Full Stack MERN Developer and CSE Student at Parul University. 20+ production-ready projects and 250+ DSA problems solved." />
+    <meta name="keywords" content="Golu Kumar, Raj Golu Shukla, MERN Developer, Full Stack Developer, Parul University, Web Developer Portfolio, LeetCode 250" />
+    <meta name="author" content="Golu Kumar" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:title" content="Golu Kumar | Portfolio | Full Stack MERN Developer" />
+    <meta property="og:description" content="Explore Golu Kumar's projects, technical skills, certifications, and problem-solving metrics." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/golukumar87" />
+<meta property="og:image" content="assets/logo.jpg" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Golu Kumar | Portfolio | Full Stack MERN Developer" />
+    <meta name="twitter:description" content="Explore Golu Kumar's projects, technical skills, certifications, and problem-solving metrics." />
+<meta name="twitter:image" content="assets/logo.jpg" />
+    
+<!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Background Canvas for Particles -->
+    <canvas id="background-canvas"></canvas>
+
+    <!-- Optional Video Background -->
+    <div class="video-background" id="video-bg-container">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="raj1.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Floating Header -->
+    <header class="header" id="main-header">
+        <a href="#home" class="user-profile">
+            <img src="logo.jpg" alt="Golu Kumar Logo">
+            <span>Golu Kumar</span>
+        </a>
+        
+        <nav class="navbar" id="main-navbar">
+            <a href="#home" class="nav-item active">Home</a>
+            <a href="#about" class="nav-item">About</a>
+            <a href="#skills" class="nav-item">Skills</a>
+            <a href="#projects" class="nav-item">Projects</a>
+            <a href="#dsa" class="nav-item">DSA Profiles</a>
+            <a href="#certifications" class="nav-item">Certifications</a>
+            <a href="#contact" class="nav-item">Contact</a>
+        </nav>
+        
+        <div class="header-actions">
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle light/dark theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            
+            <!-- Video Background Toggle -->
+            <button id="video-toggle" class="video-toggle-btn" title="Toggle Video Background (Heavy)" aria-label="Toggle video background">
+                <i class="fas fa-video-slash"></i>
+            </button>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Home Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Ready to Build & Scale</h3>
+            <h1>GOLU KUMAR</h1>
+            <h2>I'm a <span id="typed-text"></span></h2>
+            <p>Passionate about building scalable, user-centric web applications using the MERN stack that solve real-world problems and deliver measurable business impact. 250+ DSA problems solved.</p>
+            
+            <div class="hero-actions">
+                <a href="#projects" class="btn"><i class="fas fa-laptop-code"></i> View Projects</a>
+                <a href="https://drive.google.com/file/d/1WYoMMK5ULnNTIjKOiHp34zAXXlvVSTu8/view?usp=drive_link" class="btn secondary" target="_blank"><i class="fas fa-download"></i> View Resume</a>
+            </div>
+            
+            <!-- Key Metrics Dashboard Banner -->
+            <div class="metrics-banner">
+                <div class="metric-item">
+                    <span class="metric-num">20</span>
+                    <span class="metric-label">Projects</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-num">250+</span>
+                    <span class="metric-label">DSA Solved</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-num">7.5</span>
+                    <span class="metric-label">CGPA</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-num">4+</span>
+                    <span class="metric-label">Certificates</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="home-img">
+            <div class="home-img-wrapper">
+                <img src="raa.jpg" alt="Golu Kumar's Profile Picture">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="heading">
+            <span class="heading-subtitle">Who I Am</span>
+            About <span>Me</span>
+        </h2>
+        
+        <div class="about-content">
+            <div class="about-graphics">
+                <img src="raa.jpg" alt="About Golu Kumar">
+                <div class="about-experience-card">
+                    <span class="exp-num">B.Tech</span>
+                    <span class="exp-text">CSE Student</span>
+                </div>
+            </div>
+            
+            <div class="about-text">
+                <h3>Computer Science Engineer & Developer</h3>
+                <p>I am currently pursuing my Bachelor of Technology (B.Tech) in Computer Science and Engineering from Parul University, Vadodara (2023-2027). Throughout my studies, I have focused on mastery of full-stack engineering principles and data structures.</p>
+                <p>My core focus is full-stack web development using MongoDB, Express.js, React.js, and Node.js (MERN), supplemented by a solid algorithmic foundation. I design robust system architectures, establish secured verification workflows, and build seamless user interfaces that boost operational value.</p>
+                
+                <div class="about-details-grid">
+                    <div class="about-details-item">
+                        <span class="label">College</span>
+                        <span class="val">Parul University, Vadodara</span>
+                    </div>
+                    <div class="about-details-item">
+                        <span class="label">Education</span>
+                        <span class="val">B.Tech CSE (CGPA: 7.5/10)</span>
+                    </div>
+                    <div class="about-details-item">
+                        <span class="label">Email</span>
+                        <span class="val"><a href="mailto:rajgolushukla8709@gmail.com">rajgolushukla8709@gmail.com</a></span>
+                    </div>
+                    <div class="about-details-item">
+                        <span class="label">WhatsApp</span>
+                        <span class="val"><a href="https://wa.me/917256020750" target="_blank">+91 72560 20750</a></span>
+                    </div>
+                </div>
+                
+                <a href="https://drive.google.com/file/d/1WYoMMK5ULnNTIjKOiHp34zAXXlvVSTu8/view?usp=drive_link" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="heading">
+            <span class="heading-subtitle">Expertise</span>
+            My Technical <span>Skills</span>
+        </h2>
+        
+        <div class="skills-container">
+            <!-- Programming Languages -->
+            <div class="skills-category">
+                <h3><i class="fas fa-terminal"></i> Programming</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag" data-skill="java"><i class="fab fa-java"></i> Java</span>
+                    <span class="skill-tag" data-skill="javascript"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="skill-tag" data-skill="python"><i class="fab fa-python"></i> Python</span>
+                    <span class="skill-tag" data-skill="c"><i class="fas fa-code"></i> C Language</span>
+                </div>
+            </div>
+            
+            <!-- Frontend Development -->
+            <div class="skills-category">
+                <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag" data-skill="react"><i class="fab fa-react"></i> React.js</span>
+                    <span class="skill-tag" data-skill="angular"><i class="fab fa-angular"></i> Angular</span>
+                    <span class="skill-tag" data-skill="html"><i class="fab fa-html5"></i> HTML5</span>
+                    <span class="skill-tag" data-skill="css"><i class="fab fa-css3-alt"></i> CSS3</span>
+                </div>
+            </div>
+            
+            <!-- Backend Development -->
+            <div class="skills-category">
+                <h3><i class="fas fa-server"></i> Backend</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag" data-skill="nodejs"><i class="fab fa-node-js"></i> Node.js</span>
+                    <span class="skill-tag" data-skill="expressjs"><i class="fas fa-cogs"></i> Express.js</span>
+                    <span class="skill-tag" data-skill="restapi"><i class="fas fa-link"></i> REST APIs</span>
+                </div>
+            </div>
+            
+            <!-- Database Management -->
+            <div class="skills-category">
+                <h3><i class="fas fa-database"></i> Database</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag" data-skill="mongodb"><i class="fas fa-leaf"></i> MongoDB</span>
+                    <span class="skill-tag" data-skill="sql"><i class="fas fa-table"></i> SQL</span>
+                </div>
+            </div>
+            
+            <!-- Core Concepts -->
+            <div class="skills-category">
+                <h3><i class="fas fa-brain"></i> Core Concepts</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag" data-skill="dsa"><i class="fas fa-network-wired"></i> DSA</span>
+                    <span class="skill-tag" data-skill="oops"><i class="fas fa-cubes"></i> OOPs</span>
+                    <span class="skill-tag" data-skill="os"><i class="fas fa-desktop"></i> Operating Systems</span>
+                    <span class="skill-tag" data-skill="dbms"><i class="fas fa-database"></i> DBMS</span>
+                </div>
+            </div>
+            
+            <!-- Tools & Platforms -->
+            <div class="skills-category">
+                <h3><i class="fas fa-tools"></i> Tools & Tech</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag" data-skill="git"><i class="fab fa-git-alt"></i> Git</span>
+                    <span class="skill-tag" data-skill="github"><i class="fab fa-github"></i> GitHub</span>
+                    <span class="skill-tag" data-skill="vscode"><i class="fas fa-edit"></i> VS Code</span>
+                    <span class="skill-tag" data-skill="aws"><i class="fab fa-aws"></i> AWS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2 class="heading">
+            <span class="heading-subtitle">Recent Works</span>
+            Featured <span>Projects</span>
+        </h2>
+        
+        <!-- Category Filter Tabs -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="fullstack">MERN & Full-Stack</button>
+            <button class="filter-btn" data-filter="games">Games & Interactive</button>
+            <button class="filter-btn" data-filter="utilities">AI, Extensions & Python</button>
+        </div>
+        
+        <div class="projects-container">
+            
+            <!-- 1. Gramhealth -->
+            <div class="project-card show" data-category="fullstack">
+                <div class="project-img-container">
+                    <img src="ar.png" alt="Gramhealth Rural Healthcare Platform">
+                    <div class="project-badges">
+                        <span class="badge">Featured</span>
+                        <span class="badge live">MERN App</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Gramhealth Rural Platform</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">React.js</span>
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">Express</span>
+                        <span class="tech-pill">MongoDB</span>
+                        <span class="tech-pill">Twilio</span>
+                    </div>
+                    <p>Full-stack rural healthcare platform featuring appointment booking, doctor directories, and dynamic Twilio services.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Gramhealth" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Gramhealth"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. documind-ai -->
+            <div class="project-card show" data-category="utilities">
+                <div class="project-img-container">
+                    <img src="ae.png" alt="DocuMind AI Showcase">
+                    <div class="project-badges">
+                        <span class="badge">AI Tech</span>
+                        <span class="badge live">RAG App</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>DocuMind AI (RAG Tool)</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">TypeScript</span>
+                        <span class="tech-pill">OpenAI</span>
+                        <span class="tech-pill">Next.js</span>
+                        <span class="tech-pill">Vector DB</span>
+                    </div>
+                    <p>A production-ready Retrieval-Augmented Generation (RAG) platform built for AI engineer evaluation boards.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/documind-ai" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="documind-ai"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Agumentik-Project -->
+            <div class="project-card show" data-category="fullstack">
+                <div class="project-img-container">
+                    <img src="er.png" alt="Agumentik Task Platform">
+                    <div class="project-badges">
+                        <span class="badge">SaaS</span>
+                        <span class="badge live">MERN + Redux</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Agumentik SaaS Manager</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">React.js</span>
+                        <span class="tech-pill">Redux</span>
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">MongoDB</span>
+                        <span class="tech-pill">OpenAI</span>
+                    </div>
+                    <p>Real-time collaborative SaaS task management tool featuring automatic AI insights and prioritization loops.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Agumentik-Project" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Agumentik-Project"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Fitness-Hub-Complete -->
+            <div class="project-card show" data-category="fullstack">
+                <div class="project-img-container">
+                    <img src="ae.png" alt="Fitness Gym System">
+                    <div class="project-badges">
+                        <span class="badge">PWA</span>
+                        <span class="badge live">Gym Management</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Fitness Gym PWA Portal</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">React.js</span>
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">MongoDB</span>
+                    </div>
+                    <p>Enterprise-grade fitness management system structured as a Progressive Web Application for gym check-ins.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Fitness-Hub-Complete" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Fitness-Hub-Complete"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Teddy-haven-ecommerce -->
+            <div class="project-card show" data-category="fullstack">
+                <div class="project-img-container">
+                    <img src="re.png" alt="Teddy Haven E-Commerce">
+                    <div class="project-badges">
+                        <span class="badge">3D graphics</span>
+                        <span class="badge live">Vite Demo</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Teddy Haven 3D Shop</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">React.js</span>
+                        <span class="tech-pill">Vite</span>
+                        <span class="tech-pill">Three.js</span>
+                        <span class="tech-pill">LocalStorage</span>
+                    </div>
+                    <p>Premium React ecommerce demo combining Three.js 3D models with persistent checkout flow dashboards.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Teddy-haven-ecommerce" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Teddy-haven-ecommerce"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Raj-Chess-Game -->
+            <div class="project-card show" data-category="games">
+                <div class="project-img-container">
+                    <img src="image.png" alt="Chess Game Showcase">
+                    <div class="project-badges">
+                        <span class="badge">Featured Game</span>
+                        <span class="badge live">JS / Canvas</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Interactive 3D Chess Game</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">Canvas 2D</span>
+                        <span class="tech-pill">CSS 3D</span>
+                        <span class="tech-pill">Local Save</span>
+                    </div>
+                    <p>Modern browser chess game supporting 2-player mode, computer AI level parameters, and legal move highlights.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Raj-Chess-Game" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Raj-Chess-Game"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Skillswap-main -->
+            <div class="project-card show" data-category="fullstack">
+                <div class="project-img-container">
+                    <img src="p.png" alt="SkillSwap Platform Showcase">
+                    <div class="project-badges">
+                        <span class="badge">Community</span>
+                        <span class="badge live">MERN App</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>SkillSwap (Talent Exchange)</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">React.js</span>
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">Express</span>
+                        <span class="tech-pill">MongoDB</span>
+                        <span class="tech-pill">JWT</span>
+                    </div>
+                    <p>A neighbourhood skill sharing platform enabling users to trade talents and connect locally with Resend OTP verify.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Skillswap-main" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Skillswap-main"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Doctor-Appointment-System -->
+            <div class="project-card show" data-category="fullstack">
+                <div class="project-img-container">
+                    <img src="image.png" alt="Doctor Appointment Portal">
+                    <div class="project-badges">
+                        <span class="badge">Healthcare</span>
+                        <span class="badge live">MERN App</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Doctor Appointment Portal</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">React.js</span>
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">Express</span>
+                        <span class="tech-pill">MongoDB</span>
+                    </div>
+                    <p>An active scheduling platform used by local medical clinics to register clinical slots and handle checkups.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Doctor-Appointment-System" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Doctor-Appointment-System"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. JARVIS -->
+            <div class="project-card show" data-category="utilities">
+                <div class="project-img-container">
+                    <img src="re.png" alt="Jarvis assistant">
+                    <div class="project-badges">
+                        <span class="badge">Desktop</span>
+                        <span class="badge live">Python Voice</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>JARVIS Desktop Assistant</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">Speech API</span>
+                        <span class="tech-pill">OS Engine</span>
+                    </div>
+                    <p>Personal automated voice utility running 15+ OS commands with high-accuracy thread processing.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/JARVIS" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="JARVIS"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. Worker-attendance-management- -->
+            <div class="project-card show" data-category="fullstack">
+                <div class="project-img-container">
+                    <img src="er.png" alt="Worker Tracker Portal">
+                    <div class="project-badges">
+                        <span class="badge">Enterprise</span>
+                        <span class="badge live">MERN Tracker</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Worker Payroll Management</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">React.js</span>
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">Express</span>
+                        <span class="tech-pill">MongoDB</span>
+                    </div>
+                    <p>Workflow administrator dashboard calculating attendance logs, holidays, and automated salary payout rates.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Worker-attendance-management-" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Worker-attendance-management-"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. 3D-Highway-Rush -->
+            <div class="project-card show" data-category="games">
+                <div class="project-img-container">
+                    <img src="p.png" alt="Highway Rush Showcase">
+                    <div class="project-badges">
+                        <span class="badge">Racing</span>
+                        <span class="badge live">Canvas Game</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>3D Highway Rush Game</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">Canvas 2D</span>
+                        <span class="tech-pill">Game Loop</span>
+                    </div>
+                    <p>Fast-paced browser game where users dodge vehicle traffic, accumulate fuel cells, and trigger nitro speeds.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/3D-Highway-Rush" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="3D-Highway-Rush"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. Box-Maze-Challenge -->
+            <div class="project-card show" data-category="games">
+                <div class="project-img-container">
+                    <img src="image.png" alt="Box Maze Challenge">
+                    <div class="project-badges">
+                        <span class="badge">Physics</span>
+                        <span class="badge live">HTML5 / JS</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Box Maze Challenge</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">Canvas Physics</span>
+                        <span class="tech-pill">Math Vectors</span>
+                    </div>
+                    <p>Immersive tilting maze puzzle game guiding multiple balls through complex boundary obstacles via key inputs.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Box-Maze-Challenge" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Box-Maze-Challenge"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 13. focus_mode_extension -->
+            <div class="project-card show" data-category="utilities">
+                <div class="project-img-container">
+                    <img src="ae.png" alt="Focus Mode Extension">
+                    <div class="project-badges">
+                        <span class="badge">Tool</span>
+                        <span class="badge live">Chrome Ext</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>YouTube Focus Mode Ext</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">Manifest V3</span>
+                        <span class="tech-pill">Chrome APIs</span>
+                    </div>
+                    <p>Distraction-free learning browser extension hiding comments, disabling autoplay feeds, and budgeting study times.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/focus_mode_extension" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="focus_mode_extension"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 14. Weather-Check-App -->
+            <div class="project-card show" data-category="utilities">
+                <div class="project-img-container">
+                    <img src="ar.png" alt="Weather Check App">
+                    <div class="project-badges">
+                        <span class="badge">Weather</span>
+                        <span class="badge live">Weather API</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Dynamic Weather Forecast</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">Weather API</span>
+                        <span class="tech-pill">CSS Flexbox</span>
+                    </div>
+                    <p>Live forecasting application checking any global city for real-time wind speed, humidity, and extreme climate alerts.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Weather-Check-App" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Weather-Check-App"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 15. Recursive-Fractal-Tree-Generator -->
+            <div class="project-card show" data-category="utilities">
+                <div class="project-img-container">
+                    <img src="re.png" alt="Fractal Generator">
+                    <div class="project-badges">
+                        <span class="badge">Algorithms</span>
+                        <span class="badge live">Python Turtle</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Recursive Fractal Tree</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">Turtle Graphics</span>
+                        <span class="tech-pill">Recursion</span>
+                    </div>
+                    <p>Algorithmic model drawing complex organic-looking fractal patterns using recursive python turtle canvas.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Recursive-Fractal-Tree-Generator" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Recursive-Fractal-Tree-Generator"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 16. Neon-Particle-Heart-Animation -->
+            <div class="project-card show" data-category="games">
+                <div class="project-img-container">
+                    <img src="er.png" alt="Particle Animation">
+                    <div class="project-badges">
+                        <span class="badge">Graphics</span>
+                        <span class="badge live">HTML5 Canvas</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Neon Particle Heart Art</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">Canvas API</span>
+                        <span class="tech-pill">Polar Math</span>
+                    </div>
+                    <p>High performance, vanilla JS particle system rendering glowing heart layouts with mathematical canvas waves.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Neon-Particle-Heart-Animation" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Neon-Particle-Heart-Animation"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 17. Eternal-Love-A-Romantic-Proposal -->
+            <div class="project-card show" data-category="games">
+                <div class="project-img-container">
+                    <img src="p.png" alt="Proposal animation">
+                    <div class="project-badges">
+                        <span class="badge">Creative</span>
+                        <span class="badge live">Python UI</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Interactive Proposal Art</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">Turtle Graphics</span>
+                        <span class="tech-pill">Vector Lines</span>
+                    </div>
+                    <p>Graphical interactive simulation script rendering a moonlit evening proposal board using python graphics.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Eternal-Love-A-Romantic-Proposal" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Eternal-Love-A-Romantic-Proposal"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 18. VividEvents-Studio-Web -->
+            <div class="project-card show" data-category="games">
+                <div class="project-img-container">
+                    <img src="ar.png" alt="VividEvents Studio">
+                    <div class="project-badges">
+                        <span class="badge">Landing</span>
+                        <span class="badge live">HTML / CSS</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>VividEvents Studio Web</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">HTML5</span>
+                        <span class="tech-pill">CSS3</span>
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">Lead Capture</span>
+                    </div>
+                    <p>Premium event management responsive site with visual catalog showcases and dynamic review streams.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/VividEvents-Studio-Web" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="VividEvents-Studio-Web"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 19. Digital-Clock -->
+            <div class="project-card show" data-category="utilities">
+                <div class="project-img-container">
+                    <img src="ae.png" alt="Digital Clock">
+                    <div class="project-badges">
+                        <span class="badge">Widget</span>
+                        <span class="badge live">Vanilla JS</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Sleek Dynamic Clock</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">CSS Variables</span>
+                        <span class="tech-pill">Flex Grid</span>
+                    </div>
+                    <p>High-precision digital clock rendering local time offsets and modular theme styling switches.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Digital-Clock" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Digital-Clock"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 20. Age-Calculator -->
+            <div class="project-card show" data-category="utilities">
+                <div class="project-img-container">
+                    <img src="er.png" alt="Age Calculator">
+                    <div class="project-badges">
+                        <span class="badge">Utility</span>
+                        <span class="badge live">JS 3D UI</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>3D Life Progress Tracker</h3>
+                    <div class="project-tech">
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">CSS 3D Transforms</span>
+                        <span class="tech-pill">Millisecond Hooks</span>
+                    </div>
+                    <p>Interactive generation detector and life progress tracking widget mapping dates down to millisecond speeds.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/golukumar87/Age-Calculator" class="btn secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn view-details-btn" data-project-id="Age-Calculator"><i class="fas fa-info-circle"></i> Details</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DSA Section -->
+    <section class="dsa-section" id="dsa">
+        <div class="dsa-container">
+            <div class="dsa-stats-card">
+                <div class="dsa-circle">
+                    <span class="num">250+</span>
+                    <span class="label">Solved</span>
+                </div>
+                <h3>Data Structures & Algorithms</h3>
+                <p>Passionate about problem-solving and algorithmic complexity optimizations. Solving challenges daily.</p>
+                <a href="#contact" class="btn"><i class="fas fa-shield-alt"></i> Verify DSA Competence</a>
+            </div>
+            
+            <div class="dsa-details">
+                <h2 class="heading" style="text-align: left; margin-bottom: 30px;">
+                    <span class="heading-subtitle">Competitive Coding</span>
+                    Problem Solving <span>Profiles</span>
+                </h2>
+                <p style="color: var(--text-secondary); margin-bottom: 30px;">Algorithmic foundations are critical for high-performance software. Check out my performance graphs and verified solutions on these competitive coding platforms.</p>
+                
+                <div class="dsa-grids">
+                    <!-- LeetCode -->
+                    <a href="https://leetcode.com/u/GoluKumar87091/" class="dsa-profile-card" target="_blank">
+                        <i class="fas fa-code"></i>
+                        <div class="dsa-profile-info">
+                            <h4>LeetCode</h4>
+                            <p>250+ Solved (Profile: GoluKumar87091)</p>
+                        </div>
+                    </a>
+                    
+                    <!-- HackerRank -->
+                    <a href="https://www.hackerrank.com/profile/rajgolushukla871" class="dsa-profile-card" target="_blank">
+                        <i class="fab fa-hackerrank"></i>
+                        <div class="dsa-profile-info">
+                            <h4>HackerRank</h4>
+                            <p>Profile: rajgolushukla871</p>
+                        </div>
+                    </a>
+                    
+                    <!-- GitHub -->
+                    <a href="https://github.com/golukumar87" class="dsa-profile-card" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <div class="dsa-profile-info">
+                            <h4>GitHub Profiles</h4>
+                            <p>Source Codes & Solutions</p>
+                        </div>
+                    </a>
+                    
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/feed/?trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558715_kw.linkedin%20search_d.c_tid.kwd-17177611841_n.g_mt.e_geo.9303772" class="dsa-profile-card" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <div class="dsa-profile-info">
+                            <h4>LinkedIn</h4>
+                            <p>Verified DSA milestones</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certifications">
+        <h2 class="heading">
+            <span class="heading-subtitle">Credentials</span>
+            Professional <span>Certifications</span>
+        </h2>
+        
+        <div class="certs-grid">
+            <!-- Certification 1: AWS -->
+            <div class="cert-card" data-cert="aws">
+                <div>
+                    <div class="cert-icon"><i class="fab fa-aws"></i></div>
+                    <h3>Academy Cloud Foundations</h3>
+                    <div class="issuer">AWS Academy</div>
+                </div>
+                <div>
+                    <div class="year">Credential Year: 2025</div>
+                    <button class="btn view-cert-btn" data-cert-id="aws"><i class="fas fa-certificate"></i> View Certificate</button>
+                </div>
+            </div>
+            
+            <!-- Certification 2: IBM AI -->
+            <div class="cert-card" data-cert="ibm">
+                <div>
+                    <div class="cert-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI Fundamentals</h3>
+                    <div class="issuer">IBM Academy</div>
+                </div>
+                <div>
+                    <div class="year">Credential Year: 2025</div>
+                    <button class="btn view-cert-btn" data-cert-id="ibm"><i class="fas fa-certificate"></i> View Certificate</button>
+                </div>
+            </div>
+            
+            <!-- Certification 3: CDC -->
+            <div class="cert-card" data-cert="cdc">
+                <div>
+                    <div class="cert-icon"><i class="fas fa-crown"></i></div>
+                    <h3>Mic Master</h3>
+                    <div class="issuer">CDC</div>
+                </div>
+                <div>
+                    <div class="year">Credential Year: 2025</div>
+                    <button class="btn view-cert-btn" data-cert-id="cdc"><i class="fas fa-certificate"></i> View Certificate</button>
+                </div>
+            </div>
+            
+            <!-- Certification 4: TCS iON -->
+            <div class="cert-card" data-cert="tcs">
+                <div>
+                    <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>TCS iON CHAMPION</h3>
+                    <div class="issuer">TCS iON Training</div>
+                </div>
+                <div>
+                    <div class="year">Credential Year: 2024</div>
+                    <button class="btn view-cert-btn" data-cert-id="tcs"><i class="fas fa-certificate"></i> View Certificate</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">
+            <span class="heading-subtitle">Get in Touch</span>
+            Contact <span>Me</span>
+        </h2>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's collaborate on your next project!</h3>
+                <p>Have an exciting opportunity or want to discuss full-stack developer positions? Feel free to contact me. I'm actively looking for internships and full-time software engineering roles.</p>
+                
+                <div class="info-box">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:rajgolushukla8709@gmail.com" style="color: inherit; text-decoration: none;">rajgolushukla8709@gmail.com</a></p>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/917256020750" style="color: inherit; text-decoration: none;" target="_blank">+91 72560 20750</a></p>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Vadodara, Gujarat, India</p>
+                    </div>
+                </div>
+                
+                <div class="social">
+                    <a href="https://github.com/golukumar87" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/feed/?trk=sem-ga_campid.14650114788_asid.151761418307_crid.657403558715_kw.linkedin%20search_d.c_tid.kwd-17177611841_n.g_mt.e_geo.9303772" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://leetcode.com/u/GoluKumar87091/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
+                    <a href="https://www.hackerrank.com/profile/rajgolushukla871" target="_blank" title="HackerRank"><i class="fab fa-hackerrank"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <h3>Send a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required name="name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required name="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Your Phone Number" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required name="subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Write your message here..." required name="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div class="modal" id="detailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Showcase</h2>
+                <button class="close-modal" id="closeDetailsModal" aria-label="Close Details Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="code-tabs">
+                    <button class="tab-btn active" data-tab="overview">Overview</button>
+                    <button class="tab-btn" data-tab="architecture">Key Architecture</button>
+                    <button class="tab-btn" data-tab="code">Key Snippet</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="overviewTab">
+                        <img id="outputImage" src="" alt="Project Output Screenshot">
+                        <div class="output-desc" id="projectOverviewDesc">
+                            Detailed overview of the project will load here...
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="architectureTab">
+                        <div id="projectArchitecture" class="output-desc">
+                            Architecture details...
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="codeTab">
+                        <pre><code id="projectCode">Loading code snippet...</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificate Modal -->
+    <div class="modal" id="certModal">
+        <div class="modal-content" style="max-width: 600px;">
+            <div class="modal-header">
+                <h2 id="certTitle">Certificate Viewer</h2>
+                <button class="close-modal" id="closeCertModal" aria-label="Close Certificate Modal">&times;</button>
+            </div>
+            <div class="modal-body cert-modal-body">
+                <img id="certImage" src="" alt="Verified Certificate">
+                <div id="certDetails">Loading credential details...</div>
+                <a href="#" class="btn" id="downloadCertBtn" target="_blank"><i class="fas fa-external-link-alt"></i> Verify Credential</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-devotion">🌸 राधे राधे 🌸 | 🙏 राधा सदा सहायिनी भवतु 🙏</p>
+            <p style="font-size: 12px; opacity: 0.6; margin-bottom: 10px;">(राधा सदा सहायक बनी रहें)</p>
+            <p class="footer-copyright" id="copyright"></p>
+        </div>
+    </footer>
+
+<!-- Script file -->
+    <script src="js/script.js"></script>
+</body>
+</html>
