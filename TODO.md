@@ -5,6 +5,6 @@
 - [x] 2. Remove unused duplicate root-level files (style.css, script.js, raa.jpg, `js Documentation`)
 - [x] 3. Remove unused untracked assets from git tracking (raj hardwareshoping.png, raj shoping.png, etc.)
 - [x] 4. Stage all changes
-- [ ] 5. Commit with clear message
-- [ ] 6. Push to GitHub origin/main
+- [x] 5. Commit with clear message
+- [x] 6. Push to GitHub origin/main
 - [ ] 7. Verify Vercel deployment renders properly
