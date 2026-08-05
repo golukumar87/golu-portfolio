@@ -905,7 +905,7 @@ function initNavigationScroll() {
    ========================================================================== */
 function initScrollRevealAnimations() {
     const animatedItems = document.querySelectorAll(
-        'section, .skills-category, .project-card, .cert-card, .dsa-profile-card, .about-details-item, .metric-item'
+        'section:not(#projects), .skills-category, .cert-card, .dsa-profile-card, .about-details-item, .metric-item'
     );
     
     if (!animatedItems.length) return;
@@ -923,8 +923,8 @@ function initScrollRevealAnimations() {
             }
         });
     }, {
-        threshold: 0.14,
-        rootMargin: '0px 0px -70px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px -40px 0px'
     });
     
     animatedItems.forEach(item => observer.observe(item));
