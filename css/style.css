@@ -285,12 +285,29 @@ body {
     border: none;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.32) 45%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.65s ease;
+    z-index: -1;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px) perspective(700px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
     box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+}
+
+.btn:hover::after {
+    transform: translateX(120%);
 }
 
 .btn.secondary {
@@ -310,6 +327,18 @@ section {
     padding: 100px 8% 60px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.reveal-item {
+    opacity: 0;
+    transform: translateY(32px) scale(0.98);
+    transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-item.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .heading {
@@ -406,6 +435,7 @@ section {
 
 .metric-item {
     text-align: center;
+    position: relative;
 }
 
 .metric-num {
@@ -414,6 +444,16 @@ section {
     font-weight: 800;
     color: var(--accent-cyan);
     display: block;
+    animation: softPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes softPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.045);
+    }
 }
 
 .metric-label {
@@ -587,6 +627,9 @@ section {
     border: 1px solid var(--border-color);
     padding: 30px;
     border-radius: 20px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     transition: transform var(--transition-smooth), border-color var(--transition-smooth);
 }
 
@@ -692,7 +735,29 @@ section {
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+    isolation: isolate;
     transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth), opacity 0.4s ease, transform 0.4s ease;
+}
+
+.project-card::before,
+.cert-card::before,
+.skills-category::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--spot-x, 50%) var(--spot-y, 0%), rgba(99, 102, 241, 0.18), transparent 38%);
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.project-card > *,
+.cert-card > *,
+.skills-category > * {
+    position: relative;
+    z-index: 1;
 }
 
 .project-card.hide {
@@ -716,9 +781,15 @@ section {
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
     border-color: var(--card-hover-border);
     box-shadow: 0 10px 30px var(--glass-shadow);
+}
+
+.project-card:hover::before,
+.cert-card:hover::before,
+.skills-category:hover::before {
+    opacity: 1;
 }
 
 .project-img-container {
@@ -726,6 +797,18 @@ section {
     height: 220px;
     overflow: hidden;
     background: #020617;
+}
+
+.project-img-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(2, 6, 23, 0.02) 30%, rgba(2, 6, 23, 0.42) 100%),
+        linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.2) 45%, transparent 62%);
+    transform: translateX(-120%);
+    transition: transform 0.8s ease;
+    pointer-events: none;
 }
 
 .project-img-container img {
@@ -739,6 +822,10 @@ section {
     transform: scale(1.05);
 }
 
+.project-card:hover .project-img-container::after {
+    transform: translateX(120%);
+}
+
 .project-badges {
     position: absolute;
     top: 15px;
@@ -746,6 +833,10 @@ section {
     display: flex;
     gap: 8px;
     z-index: 2;
+}
+
+.project-card:hover .project-badges {
+    animation: badgeFloat 1.9s ease-in-out infinite alternate;
 }
 
 .badge {
@@ -758,6 +849,15 @@ section {
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+@keyframes badgeFloat {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-4px);
+    }
 }
 
 .badge.live {
@@ -950,7 +1050,7 @@ section {
    ========================================================================== */
 .certs-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
@@ -964,11 +1064,14 @@ section {
     flex-direction: column;
     justify-content: space-between;
     min-height: 250px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     transition: transform var(--transition-smooth), border-color var(--transition-smooth);
 }
 
 .cert-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
     border-color: var(--card-hover-border);
 }
 
@@ -1311,10 +1414,36 @@ pre {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
+#certFrame {
+    width: 100%;
+    min-height: 520px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    margin-bottom: 20px;
+    display: none;
+}
+
 #certDetails {
     font-size: 14px;
     color: var(--text-secondary);
     margin-bottom: 25px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal-item {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 /* ==========================================================================

@@ -16,6 +16,9 @@ function initApp() {
     initNavigationScroll();
     initFormHandler();
     initProjectFilters();
+    initScrollRevealAnimations();
+    initMetricCounters();
+    initMagneticInteractions();
     
     // Update Copyright Year
     const copyrightEl = document.getElementById('copyright');
@@ -246,7 +249,7 @@ function initTypingEffect() {
     const textEl = document.getElementById('typed-text');
     if (!textEl) return;
     
-    const words = ["Full Stack MERN Developer", "B.Tech CSE Student", "Problem Solver", "250+ Leetcode Solved"];
+    const words = ["UI/UX Focused Developer", "MERN Stack Developer", "Figma & Prototype Designer", "250+ Leetcode Solved"];
     let wordIdx = 0;
     let charIdx = 0;
     let isDeleting = false;
@@ -311,9 +314,33 @@ function initProjectFilters() {
 }
 
 /* ==========================================================================
-   MODAL SYSTEMS (20 PROJECT DETAILS & CERTIFICATIONS)
+   MODAL SYSTEMS (22 PROJECT DETAILS & CERTIFICATIONS)
    ========================================================================== */
 const projectData = {
+    'FinTrack-UIUX': {
+        title: "FinTrack Mobile Banking UI/UX",
+        image: "assets/project-fintrack-uiux.jpg",
+        overview: "A mobile-first banking and expense tracking interface designed for students and young professionals. The goal is to make onboarding, account overview, spending insights, and monthly budgeting simple enough to understand at a glance.<br><br><a href=\"https://github.com/golukumar87/FinTrack-Mobile-Banking-UIUX\" target=\"_blank\">Open GitHub repository</a>",
+        architecture: "â€¢ <strong>Research:</strong> User personas, pain points, competitor review, and task-flow mapping.<br>â€¢ <strong>UX Flow:</strong> Onboarding, dashboard, transactions, budget goals, and notification states.<br>â€¢ <strong>UI System:</strong> Reusable cards, typography scale, spacing rules, icons, and accessible color contrast.<br>â€¢ <strong>Prototype:</strong> Figma clickable prototype with usability-focused screen transitions.",
+        code: `// UI/UX project deliverables
+1. User persona and problem statement
+2. Low-fidelity wireframes for core banking flows
+3. High-fidelity mobile dashboard screens
+4. Reusable design system components
+5. Clickable Figma prototype and usability notes`
+    },
+    'ClinicFlow-UIUX': {
+        title: "ClinicFlow Appointment UI/UX Redesign",
+        image: "assets/project-clinicflow-uiux.jpg",
+        overview: "A healthcare appointment booking redesign focused on helping patients find doctors, compare availability, and book appointments with fewer steps. The experience emphasizes trust, readability, and mobile-first navigation.<br><br><a href=\"https://github.com/golukumar87/ClinicFlow-Appointment-UIUX\" target=\"_blank\">Open GitHub repository</a>",
+        architecture: "â€¢ <strong>User Flow:</strong> Search doctor, view profile, select slot, confirm booking.<br>â€¢ <strong>UX Focus:</strong> Reduced form friction, clear status states, and patient-friendly copy.<br>â€¢ <strong>UI System:</strong> Appointment cards, doctor profile blocks, trust badges, and accessible buttons.<br>â€¢ <strong>Prototype:</strong> Mobile-first Figma prototype prepared for usability review.",
+        code: `// UI/UX redesign checklist
+1. Identify patient booking pain points
+2. Map appointment journey from search to confirmation
+3. Build wireframes for doctor list and booking flow
+4. Create high-fidelity mobile screens
+5. Validate readability, spacing, and CTA hierarchy`
+    },
     'Gramhealth': {
         title: "Gramhealth Rural Healthcare Platform",
         image: "ar.png",
@@ -338,7 +365,7 @@ const triggerVoiceAlert = async (doctorPhone, patientName) => {
     },
     'documind-ai': {
         title: "DocuMind AI (RAG Document Assistant)",
-        image: "ae.png",
+        image: "assets/project-documind-ai.jpg",
         overview: "A production-grade Retrieval-Augmented Generation (RAG) tool built to ingest documents, generate embeddings via OpenAI models, store them inside vector tables, and perform contextual searches.",
         architecture: "• <strong>Frontend:</strong> Next.js, Tailwind CSS.<br>• <strong>AI SDK:</strong> LangChain, OpenAI LLMs.<br>• <strong>Vector DB:</strong> Pinecone / local storage vector indexes.<br>• <strong>Language:</strong> TypeScript.",
         code: `// Pinecone context-query vector search snippet (TypeScript)
@@ -657,14 +684,63 @@ const certificateData = {
         issuer: "AWS Academy",
         details: "Covers cloud concepts, architectural design patterns, AWS security protocols, billing models, and core services like EC2, S3, RDS, and VPC setups.",
         image: "logo.jpg",
-        url: "https://www.credly.com/"
+        url: "assets/certificates/aws-academy-cloud-foundations.pdf"
     },
     'ibm': {
         title: "AI Fundamentals Certificate",
-        issuer: "IBM Academy",
+        issuer: "IBM SkillsBuild",
         details: "Covers core principles of Artificial Intelligence, Machine Learning, Deep Learning, ethics in AI applications, and Neural Networks.",
         image: "logo.jpg",
-        url: "https://www.credly.com/"
+        url: "assets/certificates/ibm-ai-fundamentals.pdf"
+    },
+    'ibm-design': {
+        title: "IBM Design Thinking Certificate",
+        issuer: "IBM SkillsBuild",
+        details: "UI/UX-focused credential covering design thinking, user empathy, ideation, prototype planning, and human-centered product problem solving.",
+        image: "logo.jpg",
+        url: "assets/certificates/ibm-design-thinking-uiux.pdf"
+    },
+    'cybersecurity': {
+        title: "Introduction to Cybersecurity",
+        issuer: "Cisco / SkillsBuild",
+        details: "Validates cybersecurity basics, safe digital practices, network security concepts, threat awareness, and entry-level security foundations.",
+        image: "logo.jpg",
+        url: "assets/certificates/introduction-to-cybersecurity.pdf"
+    },
+    'angular': {
+        title: "Angular Basic Certificate",
+        issuer: "Frontend Development",
+        details: "Covers Angular fundamentals, components, templates, routing basics, and frontend application structure.",
+        image: "logo.jpg",
+        url: "assets/certificates/angular-basic.pdf"
+    },
+    'css': {
+        title: "CSS Certificate",
+        issuer: "Frontend Styling",
+        details: "Validates CSS layout, responsive styling, selectors, spacing, typography, and visual presentation fundamentals.",
+        image: "logo.jpg",
+        url: "assets/certificates/css-certificate.pdf"
+    },
+    'aws-builder': {
+        title: "AWS Skill Builder",
+        issuer: "Amazon Web Services",
+        details: "Credential showing cloud learning progress through AWS Skill Builder modules and hands-on cloud fundamentals.",
+        image: "logo.jpg",
+        url: "assets/certificates/aws-skill-builder.pdf"
+    },
+    'unstop': {
+        title: "Unstop Certificate",
+        issuer: "Unstop",
+        details: "Participation and achievement credential useful for showcasing competitive learning, events, and career engagement.",
+        image: "logo.jpg",
+        url: "assets/certificates/unstop-certificate.pdf"
+    },
+    'participation': {
+        title: "Participation Certificate",
+        issuer: "Event Participation",
+        details: "Certificate highlighting active involvement in technical or academic events and practical learning activities.",
+        image: "logo.jpg",
+        url: "assets/certificates/golu-participation-certificate.pdf"
     },
     'cdc': {
         title: "Mic Master Certificate",
@@ -678,7 +754,7 @@ const certificateData = {
         issuer: "TCS iON",
         details: "Completed industry preparation module covering communication, project execution methods, software development lifecycles, and professional agility.",
         image: "logo.jpg",
-        url: "#"
+        url: "assets/certificates/tcs-ion-champion-training.pdf"
     }
 };
 
@@ -755,7 +831,14 @@ function initModals() {
             
             // Populate content
             document.getElementById('certTitle').textContent = data.title;
-            document.getElementById('certImage').src = data.image;
+            const certImage = document.getElementById('certImage');
+            const certFrame = document.getElementById('certFrame');
+            const isPdf = data.url && data.url.toLowerCase().endsWith('.pdf');
+            
+            certImage.src = data.image;
+            certImage.style.display = isPdf ? 'none' : 'block';
+            certFrame.src = isPdf ? data.url : '';
+            certFrame.style.display = isPdf ? 'block' : 'none';
             document.getElementById('certDetails').innerHTML = `<strong>Issuer:</strong> ${data.issuer}<br><br>${data.details}`;
             
             const verifyBtn = document.getElementById('downloadCertBtn');
@@ -813,6 +896,105 @@ function initNavigationScroll() {
             if (item.getAttribute('href') === `#${current}`) {
                 item.classList.add('active');
             }
+        });
+    });
+}
+
+/* ==========================================================================
+   PREMIUM SCROLL REVEAL & MICRO INTERACTIONS
+   ========================================================================== */
+function initScrollRevealAnimations() {
+    const animatedItems = document.querySelectorAll(
+        'section, .skills-category, .project-card, .cert-card, .dsa-profile-card, .about-details-item, .metric-item'
+    );
+    
+    if (!animatedItems.length) return;
+    
+    animatedItems.forEach((item, index) => {
+        item.classList.add('reveal-item');
+        item.style.setProperty('--reveal-delay', `${Math.min(index % 8, 6) * 70}ms`);
+    });
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.14,
+        rootMargin: '0px 0px -70px 0px'
+    });
+    
+    animatedItems.forEach(item => observer.observe(item));
+}
+
+function initMetricCounters() {
+    const metricNumbers = document.querySelectorAll('.metric-num');
+    if (!metricNumbers.length) return;
+    
+    const animateNumber = (el) => {
+        if (el.dataset.counted === 'true') return;
+        el.dataset.counted = 'true';
+        
+        const label = el.textContent.trim();
+        const target = parseFloat(label.replace(/[^\d.]/g, ''));
+        if (Number.isNaN(target)) return;
+        
+        const hasPlus = label.includes('+');
+        const hasDecimal = label.includes('.');
+        const duration = 1200;
+        const start = performance.now();
+        
+        function tick(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const value = target * eased;
+            el.textContent = `${hasDecimal ? value.toFixed(1) : Math.round(value)}${hasPlus ? '+' : ''}`;
+            
+            if (progress < 1) {
+                requestAnimationFrame(tick);
+            } else {
+                el.textContent = label;
+            }
+        }
+        
+        requestAnimationFrame(tick);
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateNumber(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.8 });
+    
+    metricNumbers.forEach(num => observer.observe(num));
+}
+
+function initMagneticInteractions() {
+    const magneticItems = document.querySelectorAll('.btn, .filter-btn, .project-card, .cert-card');
+    if (!magneticItems.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    
+    magneticItems.forEach(item => {
+        item.addEventListener('mousemove', (e) => {
+            const rect = item.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width - 0.5) * 10;
+            const y = ((e.clientY - rect.top) / rect.height - 0.5) * 10;
+            item.style.setProperty('--tilt-x', `${-y}deg`);
+            item.style.setProperty('--tilt-y', `${x}deg`);
+            item.style.setProperty('--spot-x', `${e.clientX - rect.left}px`);
+            item.style.setProperty('--spot-y', `${e.clientY - rect.top}px`);
+        });
+        
+        item.addEventListener('mouseleave', () => {
+            item.style.removeProperty('--tilt-x');
+            item.style.removeProperty('--tilt-y');
+            item.style.removeProperty('--spot-x');
+            item.style.removeProperty('--spot-y');
         });
     });
 }
