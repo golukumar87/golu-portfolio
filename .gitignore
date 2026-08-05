@@ -1,4 +1,29 @@
-".tmp/" 
+# Temporary files
 .tmp/
-*.mp4
 output/
+*.tmp
+
+# Media files (large videos)
+*.mp4
+
+# Old/duplicate root-level files (replaced by css/ and js/ folders)
+/style.css
+/script.js
+
+# Unused assets
+assets/raj hardwareshoping.png
+assets/raj shoping.png
+
+# Documentation notes (not part of the site)
+/js Documentation
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo

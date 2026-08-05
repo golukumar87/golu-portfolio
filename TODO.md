@@ -1,10 +1,10 @@
-# TODO - Portfolio Restructure & GitHub Push
+# TODO - Portfolio GitHub Re-upload & Cleanup
 
 ## Steps
-- [x] Analyze portfolio folder structure
-- [ ] Create proper project structure (assets/, css/, js/)
-- [ ] Update relative paths in index.html and script.js
-- [ ] Create README.md
-- [ ] Create .gitignore
-- [ ] Create LICENSE
-- [ ] Initialize git, add remote, commit & push to GitHub
+- [x] 1. Update `.gitignore` to properly ignore unnecessary files
+- [x] 2. Remove unused duplicate root-level files (style.css, script.js, raa.jpg, `js Documentation`)
+- [x] 3. Remove unused untracked assets from git tracking (raj hardwareshoping.png, raj shoping.png, etc.)
+- [x] 4. Stage all changes
+- [ ] 5. Commit with clear message
+- [ ] 6. Push to GitHub origin/main
+- [ ] 7. Verify Vercel deployment renders properly
